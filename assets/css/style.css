@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+.container-page {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: hsl(235, 18%, 26%);
+}
+
+.form {
+    display: flex;
+    margin: auto;
+    border-radius: 32px;
+    padding: 24px;
+    background-color: #fff;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 480px;
+    padding: 72px 48px;
+}
+
+.container1 h2 {
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 0.8em;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+ul li {
+    display: flex;
+    gap: 16px;
+}
+
+label[for='email'] {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#email {
+    border: 1px solid hsl(231, 7%, 60%);
+    outline: none;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+#btn-form {
+    background-color: hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    padding: 24px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
