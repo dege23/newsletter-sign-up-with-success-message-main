@@ -1,4 +1,12 @@
 :root {
+    /* Gradients */
+    --gradient-primary: #ff6a3a;
+    --gradient-secondary: #ff527b;
+
+    /* Primary */
+    --tomato: hsl(4, 100%, 67%);
+
+    /* Neutral */
     --dark-slate-grey: hsl(234, 29%, 20%);
     --charcoal-grey: hsl(235, 18%, 26%);
     --grey: hsl(231, 7%, 60%);
@@ -14,8 +22,8 @@
 }
 
 html {
-    width: max-content;
-    height: max-content;
+    width: 100vw;
+    height: 100vh;
 }
 
 body {
@@ -55,6 +63,14 @@ body {
     gap: 24px;
 }
 
+.success-panel .header-success {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    gap: 24px;
+}
+
 .form.success .success-panel {
     display: flex;
 }
@@ -62,6 +78,7 @@ body {
 .success-panel h2 {
     font-weight: 700;
     font-size: 3rem;
+    line-height: 1em;
 }
 
 .success-panel p {
@@ -72,10 +89,19 @@ body {
 #btn-success {
     background-color: var(--dark-slate-grey);
     color: var(--white);
-    padding: 24px;
+    padding: 20px 0;
     border: none;
     border-radius: 12px;
     font-weight: 700;
+}
+
+#btn-form:hover,
+#btn-success:hover {
+    background: linear-gradient(
+        270deg,
+        var(--gradient-primary),
+        var(--gradient-secondary)
+    );
 }
 
 .success-panel #btn-success {
@@ -87,12 +113,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     max-width: 480px;
-    padding: 72px 48px;
+    padding: 64px 36px;
+    gap: 24px;
 }
 
 .container1 h2 {
     font-weight: 700;
-    font-size: 3.2rem;
+    font-size: 3rem;
     line-height: 0.8em;
 }
 
@@ -115,11 +142,51 @@ label[for='email'] {
     gap: 12px;
 }
 
+.header-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-email h3:nth-child(2) {
+    display: none;
+    color: var(--tomato);
+}
+
 #email {
     border: 1px solid var(--grey);
     outline: none;
-    padding: 24px;
+    padding: 20px;
     border-radius: 12px;
+    font-size: 1rem;
+}
+
+#email:hover {
+    outline: 1px solid var(--dark-slate-grey);
+}
+
+.form.error .header-email h3:nth-child(2) {
+    display: flex;
+}
+
+.form.error #email {
+    background-color: hsla(4, 100%, 67%, 0.243);
+    border: 1px solid var(--tomato);
+}
+
+.form.error #email:hover {
+    outline: 1px solid var(--tomato);
+}
+
+.form.error #email::placeholder {
+    color: hsl(4, 100%, 67%);
+}
+
+.container2 .mobile {
+    display: none;
+}
+
+.container2 .desktop {
+    display: block;
 }
 
 .attribution {
