@@ -13,11 +13,25 @@
     font-family: Roboto;
 }
 
+html {
+    width: max-content;
+    height: max-content;
+}
+
+body {
+    width: max-content;
+    height: max-content;
+}
+
 .container-page {
     display: flex;
     flex-direction: column;
+    min-width: max-content;
     width: 100vw;
-    min-height: 100vh;
+    min-height: max-content;
+    height: 100vh;
+    padding: 24px 48px 12px;
+    gap: 48px;
     background-color: hsl(235, 18%, 26%);
 }
 
@@ -110,7 +124,6 @@ label[for='email'] {
 
 .attribution {
     text-align: center;
-    margin: 8px 0;
 }
 
 .attribution,
