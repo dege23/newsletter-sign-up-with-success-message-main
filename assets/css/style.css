@@ -22,13 +22,14 @@
 }
 
 html {
-    width: 100vw;
-    height: 100vh;
+    width: max-content;
+    height: max-content;
 }
 
 body {
     width: max-content;
     height: max-content;
+    background-color: hsl(235, 18%, 26%);
 }
 
 .container-page {
@@ -36,11 +37,10 @@ body {
     flex-direction: column;
     min-width: max-content;
     width: 100vw;
-    min-height: max-content;
-    height: 100vh;
+    min-height: 100vh;
+    height: max-content;
     padding: 24px 48px 12px;
     gap: 48px;
-    background-color: hsl(235, 18%, 26%);
 }
 
 .form {
