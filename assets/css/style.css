@@ -51,10 +51,6 @@ body {
     background-color: var(--white);
 }
 
-.form.success .container {
-    display: none;
-}
-
 .success-panel {
     display: none;
     flex-direction: column;
@@ -71,8 +67,29 @@ body {
     gap: 24px;
 }
 
+.form.success .container {
+    display: none;
+}
+
 .form.success .success-panel {
     display: flex;
+}
+
+.header-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-email h3:nth-child(2) {
+    opacity: 0;
+    color: transparent;
+    transition: opacity 0.6s ease-in, color 0.6s ease-in;
+}
+
+.form.error .header-email h3:nth-child(2) {
+    opacity: 1;
+    color: var(--tomato);
+    transition: opacity 0.6s ease-in, color 0.6s ease-in;
 }
 
 .success-panel h2 {
@@ -142,30 +159,24 @@ label[for='email'] {
     gap: 12px;
 }
 
-.header-email {
-    display: flex;
-    justify-content: space-between;
-}
-
-.header-email h3:nth-child(2) {
-    display: none;
-    color: var(--tomato);
-}
-
 #email {
-    border: 1px solid var(--grey);
+    border: 1px solid var(--dark-slate-grey);
     outline: none;
     padding: 20px;
     border-radius: 12px;
     font-size: 1rem;
+    transition: background 0.6s ease-in, border 0.6s ease-in,
+        outline 0.6s ease-in;
 }
 
 #email:hover {
     outline: 1px solid var(--dark-slate-grey);
+    transition: background 0.6s ease-in, border 0.6s ease-in,
+        outline 0.6s ease-in;
 }
 
-.form.error .header-email h3:nth-child(2) {
-    display: flex;
+#email::placeholder {
+    transition: color 0.6s ease;
 }
 
 .form.error #email {
@@ -175,10 +186,13 @@ label[for='email'] {
 
 .form.error #email:hover {
     outline: 1px solid var(--tomato);
+    transition: background 0.6s ease-in, border 0.6s ease-in,
+        outline 0.6s ease-in;
 }
 
 .form.error #email::placeholder {
     color: hsl(4, 100%, 67%);
+    transition: color 0.6s ease;
 }
 
 .container2 .mobile {
